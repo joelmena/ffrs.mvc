@@ -1,0 +1,39 @@
+@model IEnumerable<ffrs.mvc.Models.Contacto>
+
+@{
+    ViewData["title"] = "Listado";
+    var count = 1;
+}
+
+<h5>Listado de miembros voluntarios</h5>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <caption>Total de miembros registrados: @Model.Count()</caption>
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">No.</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Fecha de Nacimiento</th>
+                <th scope="col">Cedula</th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Telefono</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@count</th>
+                    <td>@Html.DisplayFor(modelItem => item.Nombres)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Apellidos)</td>
+                    <td>@Html.DisplayFor(modelItem => item.FechaNacimiento)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Cedula)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Sexo)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Telefono)</td>
+                </tr>
+                count++;
+            }
+        </tbody>
+    </table>
+</div>
