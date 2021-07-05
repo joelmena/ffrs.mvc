@@ -4,8 +4,14 @@
     ViewData["title"] = "Listado";
     var count = 1;
 }
-
-<h5>Listado de miembros voluntarios</h5>
+<div class="row">
+    <div class="col align-self-start">
+        <h5>Listado de miembros voluntarios</h5>
+    </div>
+    <div class="col align-self-end btn-sm">
+        <a asp-controller="Test" asp-action="Register" class="btn btn-primary btn-sm"><i class="fa fa-plus-square"></i> Nuevo</a>
+    </div>
+</div>
 <div class="table-responsive">
     <table class="table table-striped">
         <caption>Total de miembros registrados: @Model.Count()</caption>
@@ -18,6 +24,7 @@
                 <th scope="col">Cedula</th>
                 <th scope="col">Sexo</th>
                 <th scope="col">Telefono</th>
+                <th scope="col">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -31,6 +38,11 @@
                     <td>@Html.DisplayFor(modelItem => item.Cedula)</td>
                     <td>@Html.DisplayFor(modelItem => item.Sexo)</td>
                     <td>@Html.DisplayFor(modelItem => item.Telefono)</td>
+                    <td>
+                        <a asp-controller="Test" asp-action="Register" asp-for="@item.Id"><i class="fa fa-eye"></i></a>
+                        <a asp-controller="Test" asp-action="Register" asp-for="@item.Id"><i class="fa fa-edit"></i></a>
+                        <a asp-controller="Test" asp-action="Register" asp-for="@item.Id"><i class="fa fa-trash-alt"></i></a>
+                    </td>
                 </tr>
                 count++;
             }

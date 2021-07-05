@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ffrs.mvc.Models;
 using ffrs.mvc.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ffrs.mvc.Controllers
 {
+    [Authorize]
     public class ContactosController : Controller
     {
         private readonly ApplicationDbContext _context;

@@ -4,12 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using ffrs.mvc.Data;
 using ffrs.mvc.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 //using ffrs.mvc.Models;
 
 namespace ffrs.mvc.Controllers
 {
+    [Authorize]
     public class TestController : Controller
     {
         private readonly ApplicationDbContext _db;
