@@ -12,6 +12,8 @@ using ffrs.mvc.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ffrs.mvc.Repositories;
+using ffrs.mvc.Repositories.IRepositories;
 
 namespace ffrs.mvc
 {
@@ -43,6 +45,9 @@ namespace ffrs.mvc
 
             services.AddDbContext<ApplicationDbContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("ApplicacionDbContext")));
+            
+            //independent injection
+            services.AddScoped<IContactRepository, ContactRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

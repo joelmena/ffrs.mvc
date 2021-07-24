@@ -56,7 +56,7 @@ namespace ffrs.mvc.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nombres,Apellidos,Cedula,FechaNacimiento,Sexo,Telefono,Direccion")] Contacto contacto)
+        public async Task<IActionResult> Create([Bind("Id,Nombres,Apellidos,Cedula,FechaNacimiento,Sexo,Telefono,Direccion, CreatedAt, Inactivo")] Contacto contacto)
         {
             if (ModelState.IsValid)
             {

@@ -188,3 +188,4 @@ C:\Users\joelmena\Desktop\NEXTCOM\ffrs.mvc\obj\Debug\net5.0\Razor\Views\Contacto
 C:\Users\joelmena\Desktop\NEXTCOM\ffrs.mvc\obj\Debug\net5.0\Razor\Views\Contactos\Index.cshtml.g.cs
 C:\Users\joelmena\Desktop\NEXTCOM\ffrs.mvc\obj\Debug\net5.0\Razor\Views\Test\Register.cshtml.g.cs
 C:\Users\joelmena\Desktop\NEXTCOM\ffrs.mvc\obj\Debug\net5.0\Razor\Views\Test\Index.cshtml.g.cs
+C:\Users\joelmena\Desktop\NEXTCOM\ffrs.mvc\obj\Debug\net5.0\Razor\Views\Test\Edit.cshtml.g.cs

@@ -1,0 +1,82 @@
+@model ffrs.mvc.Models.Contacto
+
+<div class="container">
+    <form asp-action="Edit" asp-controller="Test">
+        
+        <div class="form-row">
+            
+            <div class="form-group col-md-6">
+                <label for="nombres">Nombres</label>
+                <input type="text" class="form-control" name="Nombres" id="nombres" asp-for="@Model.Nombres" maxlength="50">
+            </div>
+        
+            <div class="form-group col-md-6">
+                <label for="apellidos">Apellidos</label>
+                <input type="text" class="form-control" name="Apellidos" id="apellidos" asp-for="@Model.Apellidos" maxlength="50">
+            </div>
+        </div>
+
+        <div class="form-row">
+            
+            <div class="form-group col-md-6">
+                <label for="cedula">Cedula</label>
+                <input type="text" class="form-control" name="Cedula" id="cedula" asp-for="@Model.Cedula" maxlength="20">
+            </div>
+            
+            <div class="form-group col-md-6">
+                <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                <input type="date" class="form-control" asp-for="@Model.FechaNacimiento" name="FechaNacimiento">
+            </div>
+
+        </div>
+        
+        <fieldset class="form-goup">
+            <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0">Sexo</legend>
+                <div class="col-sm-10">
+                    @if(Model.Sexo == 'M')
+                    {
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="Sexo" value="M" id="sexoM" checked=true>
+                            <label for="sexo" class="form-check-label">Masculino</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="Sexo" value="F" id="sexoF">
+                            <label for="sexoF" class="form-check-label">Femenino</label>
+                        </div>    
+                    }
+                    else
+                    {
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="Sexo" value="M" id="sexoM">
+                            <label for="sexo" class="form-check-label">Masculino</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="Sexo" value="F" id="sexoF" checked>
+                            <label for="sexoF" class="form-check-label">Femenino</label>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </fieldset>
+        
+        <div class="for-row">
+
+            <div class="form-group">
+                <label for="telefono">Telefono</label>
+                <input type="text" class="form-control" name="Telefono" id="telefono" asp-for="@Model.Telefono" maxlength="20">
+            </div>
+
+            <div class="form-group">
+                <label for="direccion">Direccion</label>
+                <input type="text" class="form-control" name="Direccion" id="direccion" asp-for="@Model.Direccion" maxlength="300">
+            </div>
+
+            <button type="submit" class="btn btn-success"><i class="fa fa-plus-square"></i> Enviar</button>
+            <a asp-controller="Test" asp-action="Index" class="btn btn-primary"><i class="fa fa-window-close"></i> Cancelar</a>
+        </div>
+    </form>
+</div>

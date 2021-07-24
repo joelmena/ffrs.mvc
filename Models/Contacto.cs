@@ -10,5 +10,7 @@ namespace ffrs.mvc.Models
         public char Sexo { get; set; }
         public string Telefono { get; set; }
         public string Direccion { get; set; }
+        public System.DateTime CreatedAt { get; set; }
+        public bool Inactivo { get; set; }
     }
 }

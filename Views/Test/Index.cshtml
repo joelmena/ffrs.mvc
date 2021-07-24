@@ -39,9 +39,9 @@
                     <td>@Html.DisplayFor(modelItem => item.Sexo)</td>
                     <td>@Html.DisplayFor(modelItem => item.Telefono)</td>
                     <td>
-                        <a asp-controller="Test" asp-action="Register" asp-for="@item.Id"><i class="fa fa-eye"></i></a>
-                        <a asp-controller="Test" asp-action="Register" asp-for="@item.Id"><i class="fa fa-edit"></i></a>
-                        <a asp-controller="Test" asp-action="Register" asp-for="@item.Id"><i class="fa fa-trash-alt"></i></a>
+                        <a asp-controller="Test" asp-action="Details" asp-route-id="@item.Id"><i class="fa fa-eye"></i></a> |
+                        <a asp-controller="Test" asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit"></i></a> |
+                        <a asp-controller="Test" asp-action="Delete" asp-route-id="@item.Id"><i class="fa fa-trash-alt"></i></a>
                     </td>
                 </tr>
                 count++;
